@@ -2,15 +2,12 @@ import os
 import random
 
 def generate_random_matrix(rows, cols, min_val, max_val):
-    """Genera una matriz de números aleatorios."""
     return [[random.randint(min_val, max_val) for _ in range(cols)] for _ in range(rows)]
 
 def generate_random_row(cols, min_val, max_val):
-    """Genera una fila de números aleatorios."""
     return [random.randint(min_val, max_val) for _ in range(cols)]
 
 def write_to_file(filepath, data):
-    """Escribe datos en un archivo."""
     with open(filepath, 'w') as file:
         if isinstance(data[0], list):  # Es una matriz
             for row in data:
